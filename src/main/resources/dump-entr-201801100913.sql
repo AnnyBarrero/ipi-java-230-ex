@@ -1,3 +1,4 @@
+CREATE SCHEMA entreprise;
 USE entreprise;
 
 DROP TABLE IF EXISTS `Employe`;

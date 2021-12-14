@@ -9,7 +9,6 @@ public class Unite<T> {
     private HashSet<T> membres = new HashSet<>();
 
     public Unite() {
-
     }
 
     public Unite(T membre) {

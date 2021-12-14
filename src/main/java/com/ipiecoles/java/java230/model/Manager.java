@@ -3,17 +3,19 @@ package com.ipiecoles.java.java230.model;
 import com.ipiecoles.java.java230.exceptions.TechnicienException;
 import org.joda.time.LocalDate;
 
+import javax.persistence.FetchType;
+import javax.persistence.OneToMany;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
 public class Manager extends Employe {
+	@OneToMany(mappedBy = "manager", fetch = FetchType.EAGER)
 
 	private Set<Technicien> equipe = new HashSet();
 
 	public Manager(){
-
 	}
 
 	public Manager(String nom, String prenom, String matricule, LocalDate dateEmbauche, Double salaire, HashSet<Technicien> equipe) {
